@@ -22,6 +22,10 @@
                     <extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
                     					
                     <extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.MakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.VCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
                     				
                 </extensions>
                 			
@@ -33,7 +37,7 @@
                     					
                     <folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.base.1558122219.1894772779" name="/" resourcePath="">
                         						
-                        <toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.base.767830326" name="ARM Cross GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.base">
+                        <toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.base.767830326" name="ARM Cross GCC">
                             							
                             <option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.1954104404" name="Architecture" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture" value="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.arm" valueType="enumerated"/>
                             							
@@ -181,77 +185,15 @@
                             							
                             <option id="ilg.gnuarmeclipse.managedbuild.cross.option.showDevicesTab.2045790445" name="showDevicesTab" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.showDevicesTab"/>
                             							
-                            <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.1195271125" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
+                            <targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.1195271125" isAbstract="false" osList="all"/>
                             							
-                            <builder id="ilg.gnuarmeclipse.managedbuild.cross.builder.1780357125" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="true" parallelizationNumber="optimal" superClass="ilg.gnuarmeclipse.managedbuild.cross.builder"/>
-                            							
-                            <tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.65844346" name="GNU ARM Cross Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler">
-                                								
-                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor.179797552" name="Use preprocessor" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-                                								
-                                <inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.1063451497" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
-                                							
-                            </tool>
-                            							
-                            <tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.950182974" name="GNU ARM Cross C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
-                                								
-                                <inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.883802114" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
-                                							
-                            </tool>
-                            							
-                            <tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.1825514861" name="GNU ARM Cross C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler">
-                                								
-                                <inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.1808813903" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input"/>
-                                							
-                            </tool>
-                            							
-                            <tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.22385684" name="GNU ARM Cross C Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker">
-                                								
-                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections.275048470" name="Remove unused sections (-Xlinker --gc-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-                                							
-                            </tool>
-                            							
-                            <tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.2042362246" name="GNU ARM Cross C++ Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker">
-                                								
-                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections.1080164564" name="Remove unused sections (-Xlinker --gc-sections)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-                                								
-                                <inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.input.999675535" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.input">
-                                    									
-                                    <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
-                                    									
-                                    <additionalInput kind="additionalinput" paths="$(LIBS)"/>
-                                    								
-                                </inputType>
-                                							
-                            </tool>
-                            							
-                            <tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.992391413" name="GNU ARM Cross Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver"/>
-                            							
-                            <tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.1916599151" name="GNU ARM Cross Create Flash Image" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash"/>
-                            							
-                            <tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.567549186" name="GNU ARM Cross Create Listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting">
-                                								
-                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source.1864182328" name="Display source (--source|-S)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-                                								
-                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders.2146340856" name="Display all headers (--all-headers|-x)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-                                								
-                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle.958267092" name="Demangle names (--demangle|-C)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-                                								
-                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers.948600756" name="Display line numbers (--line-numbers|-l)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-                                								
-                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide.1443109478" name="Wide lines (--wide|-w)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide" useByScannerDiscovery="false" value="true" valueType="boolean"/>
-                                							
-                            </tool>
-                            							
-                            <tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.1112674044" name="GNU ARM Cross Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize">
-                                								
-                                <option id="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format.1508787514" name="Size format" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format" useByScannerDiscovery="false"/>
-                                							
-                            </tool>
+                            <builder id="ilg.gnuarmeclipse.managedbuild.cross.builder.1780357125" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" parallelBuildOn="true"/>
                             						
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.base.1558122219.855223771" name="Makefile" rcbsApplicability="disable" resourcePath="Makefile" toolsToInvoke=""/>
                     				
                 </configuration>
                 			
